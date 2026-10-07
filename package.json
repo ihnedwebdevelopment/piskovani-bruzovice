@@ -1,0 +1,31 @@
+{
+  "name": "piskovani-bruzovice",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "node scripts/build.mjs",
+    "build:vercel": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "db:generate": "drizzle-kit generate",
+    "api:dev": "node --env-file-if-exists=.env.local scripts/dev-api.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "api:sites": "wrangler dev --local --port 8787"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^6.0.0",
+    "drizzle-kit": "^0.31.11",
+    "drizzle-orm": "^0.45.3",
+    "esbuild": "^0.28.2",
+    "vite": "^7.0.0",
+    "wrangler": "^4.147.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

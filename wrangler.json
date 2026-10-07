@@ -1,0 +1,8 @@
+{
+  "name": "piskovani-bruzovice-local",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "dist/client", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "bruzovice-inquiries-local", "migrations_dir": "drizzle" }],
+  "observability": { "enabled": true }
+}

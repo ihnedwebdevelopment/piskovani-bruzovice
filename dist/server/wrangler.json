@@ -1,0 +1,19 @@
+{
+  "name": "piskovani-bruzovice",
+  "main": "index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "../client",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bruzovice-inquiries",
+      "migrations_dir": "../../drizzle"
+    }
+  ]
+}

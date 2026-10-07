@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "settings": {
+    "email": "gadula.jiri@seznam.cz",
+    "siteTitle": "Pískování Bruzovice | Nový začátek pro každý povrch",
+    "description": "Pískování a tryskání v Bruzovicích. Karoserie veteránů, rámy a kovové konstrukce."
+  },
+  "assets": {
+    "hero": "/media/skoda-110r-05.webp",
+    "heroVideo": "/media/skoda-110r-video.mp4",
+    "intro": "/media/skoda-110r-01.webp",
+    "introAlt": "Detail ručního tryskání karoserie Škody 110 R",
+    "statement": "/media/veteran-01.webp"
+  },
+  "copy": {
+    "general": {
+      "text001": "Přejít k obsahu",
+      "text020": "RENOVACE VETERÁNŮ",
+      "text021": "ODSTRANĚNÍ KOROZE",
+      "text022": "PŘÍPRAVA POVRCHŮ",
+      "text023": "KOVOVÉ KONSTRUKCE",
+      "text082": "Nezávazně poptat"
+    },
+    "site-header": {
+      "text002": "PÍSKOVÁNÍ",
+      "text003": "BRUZOVICE",
+      "text004": "Co umíme",
+      "text005": "Realizace",
+      "text006": "Videa",
+      "text007": "Jak to probíhá",
+      "text008": "Poptat zakázku"
+    },
+    "nahoru": {
+      "text009": "BRUZOVICE & OKOLÍ · PÍSKOVÁNÍ A TRYSKÁNÍ",
+      "text010": "POD NÁNOSEM ČASU",
+      "text011": "JE",
+      "text012": "NOVÝ ZAČÁTEK.",
+      "text013": "Vracíme kovu čistý základ. Od karoserií veteránů po pracovní stroje a konstrukce — s pozorností ke každému detailu.",
+      "text014": "Pojďme probrat váš projekt",
+      "text015": "Podívat se na práci",
+      "text016": "Poctivé řemeslo.",
+      "text017": "Přímo z Bruzovic.",
+      "text018": "Z NAŠICH REALIZACÍ",
+      "text019": "Škoda 110 R"
+    },
+    "intro": {
+      "text024": "RUCE, KTERÉ ZNAJÍ SVÉ ŘEMESLO.",
+      "text025": "Starý povrch.",
+      "text026": "Nové možnosti.",
+      "text027": "Základ dobré renovace",
+      "text028": "Má to svůj příběh.",
+      "text029": "A ještě hodně před sebou.",
+      "text030": "Rez ani starý nátěr nemusí znamenat konec.",
+      "text031": "Tryskáním odhalujeme původní podklad a připravujeme ho pro další opravy a povrchové úpravy. Ke každé zakázce přistupujeme podle materiálu, jeho stavu a toho, co má následovat.",
+      "text032": "Postup podle konkrétního povrchu",
+      "text033": "Důraz na detaily i hůře přístupná místa",
+      "text034": "Domluva od prvního kontaktu",
+      "text035": "Poznejte naše služby"
+    },
+    "sluzby": {
+      "text036": "Co umíme",
+      "text037": "Malý díl. Celá karoserie.",
+      "text038": "Pořádný kus práce.",
+      "text039": "Pomůžeme odstranit vrstvy, které už dosloužily. A připravit prostor pro ty nové.",
+      "text040": "Probrat zakázku"
+    },
+    "realizace": {
+      "text041": "Výsledky mluví za nás",
+      "text042": "Z terénu.",
+      "text043": "Bez příkras.",
+      "text044": "Naše zakázky tak, jak opravdu probíhaly. Od prvního záběru po očištěný kov.",
+      "text045": "FOTOGRAFIE Z VLASTNÍCH REALIZACÍ",
+      "text046": "Počet zobrazených realizací:"
+    },
+    "statement": {
+      "text047": "Na dobrém základu záleží",
+      "text048": "DALŠÍ KAPITOLA",
+      "text049": "ZAČÍNÁ",
+      "text050": "ČISTÝM POVRCHEM.",
+      "text051": "Připravíme ten váš"
+    },
+    "postup": {
+      "text052": "Od domluvy k výsledku",
+      "text053": "Jednoduše.",
+      "text054": "Od první zprávy.",
+      "text055": "Nemusíte znát druh abraziva ani přesný postup. Stačí nám říct, co chcete zachránit.",
+      "text056": "Ukažte nám svůj projekt",
+      "text057": "Pošlete pár fotografií, přibližné rozměry a krátký popis stavu materiálu.",
+      "text058": "Domluvíme detaily",
+      "text059": "Probereme vhodný postup, rozsah práce, místo realizace i cenu.",
+      "text060": "Připravíme čistý základ",
+      "text061": "Otryskáme povrch a připravíme jej pro navazující opravy a úpravy."
+    },
+    "faq-section": {
+      "text062": "Ještě vás může zajímat",
+      "text063": "Dobré otázky.",
+      "text064": "Jasné odpovědi.",
+      "text065": "Nenašli jste, co potřebujete?",
+      "text066": "Napište nám"
+    },
+    "kontakt": {
+      "text067": "Váš projekt začíná tady",
+      "text068": "Pojďme mu dát",
+      "text069": "nový začátek.",
+      "text070": "Popište nám, co potřebujete očistit. Podíváme se na možnosti a společně domluvíme další postup.",
+      "text071": "NAPIŠTE NÁM",
+      "text072": "Bruzovice a okolí",
+      "text073": "Možnost realizace na místě dle domluvy.",
+      "text074": "Fotka řekne víc než dlouhý popis.",
+      "text075": "Připravte si pár záběrů svého projektu."
+    },
+    "footer": {
+      "text076": "PÍSKOVÁNÍ",
+      "text077": "BRUZOVICE",
+      "text078": "Poctivá práce.",
+      "text079": "Čistý základ.",
+      "text080": "Pískování Bruzovice",
+      "text081": "PÍSKOVÁNÍ · TRYSKÁNÍ · RENOVACE"
+    },
+    "project-dialog": {
+      "text083": "Video z realizace",
+      "text084": "Váš prohlížeč nepodporuje přehrávání videa."
+    },
+    "videa": {
+      "text001": "Řemeslo v pohybu",
+      "text002": "Podívejte se nám",
+      "text003": "pod ruce.",
+      "text004": "Čtyři krátké záběry přímo z práce. Uvidíte, jak staré vrstvy mizí a pod nimi se objevuje čistý kov.",
+      "text005": "Přehrát záběr",
+      "text006": "ZÁZNAM Z REALIZACE",
+      "text007": "Otevřít video",
+      "text008": "Zvuk můžete zapnout v přehrávači."
+    },
+    "form": {
+      "text001": "Poptávka",
+      "text002": "Děkujeme.",
+      "text003": "Poptávka je odeslaná.",
+      "text004": "Ozveme se vám co nejdříve. Chcete přidat fotografie? Pošlete nám je e-mailem a do zprávy připojte číslo poptávky.",
+      "text005": "Doplnit fotografie e-mailem",
+      "text006": "Nezávazná poptávka",
+      "text007": "Co pro vás můžeme očistit?",
+      "text008": "Zabere asi 2 minuty",
+      "text009": "O jakou zakázku jde?",
+      "text010": "Vaše jméno",
+      "text011": "E-mail",
+      "text012": "Telefon",
+      "text013": "nepovinné",
+      "text014": "Místo realizace",
+      "text015": "nepovinné",
+      "text016": "Popište nám svůj projekt",
+      "text017": "Fotografie můžete doplnit e-mailem po odeslání.",
+      "text018": "Webová stránka",
+      "text019": "Souhlasím s použitím kontaktních údajů pro vyřízení této poptávky.",
+      "text020": "Jak nakládáme s údaji?",
+      "text021": "Jméno, kontakt a popis zakázky nám formulář pošle e-mailem a použijeme je jen pro vyřízení poptávky. Nikde se nezveřejňují. Pro opravu nebo odstranění údajů napište na gadula.jiri@seznam.cz. Fotografie lze doplnit přes e-mailový odkaz.",
+      "text022": "Odesíláme poptávku…",
+      "text023": "Odeslat nezávaznou poptávku",
+      "text024": "Poptávka přijde přímo nám",
+      "text025": "Raději e-mailem"
+    }
+  },
+  "services": [
+    {
+      "title": "Karoserie & veteráni",
+      "text": "Od prvního odkrytého plechu po poslední detail. Příprava karoserií a dílů na další etapu renovace.",
+      "icon": "car",
+      "detail": "KAROSERIE · PODVOZKY · DÍLY"
+    },
+    {
+      "title": "Rámy & technika",
+      "text": "Nový základ pro stroje, které mají ještě hodně práce před sebou. Očištění rámů a strojních součástí.",
+      "icon": "frame",
+      "detail": "RÁMY · STROJE · SOUČÁSTI"
+    },
+    {
+      "title": "Kovové konstrukce",
+      "text": "Odstraňování koroze a starých nátěrů z kovových prvků. Rozsah a postup přizpůsobíme konkrétní zakázce.",
+      "icon": "beam",
+      "detail": "KONSTRUKCE · PROFILY · KOV"
+    }
+  ],
+  "projects": [
+    {
+      "id": "skoda",
+      "title": "Škoda 110 R",
+      "category": "Veteráni",
+      "kicker": "Renovace karoserie",
+      "cover": "/media/skoda-110r-06.webp",
+      "alt": "Tryskání karoserie Škoda 110 R u zákazníka",
+      "description": "Karoserie legendární Škody 110 R během přípravy na renovaci. Fotografie zachycují samotné tryskání i postupně očištěné plochy.",
+      "images": [
+        "/media/skoda-110r-06.webp",
+        "/media/skoda-110r-05.webp",
+        "/media/skoda-110r-02.webp",
+        "/media/skoda-110r-04.webp"
+      ],
+      "video": "/media/skoda-110r-video.mp4"
+    },
+    {
+      "id": "multikara",
+      "title": "Rám Multikáry",
+      "category": "Technika",
+      "kicker": "Tryskání podvozku",
+      "cover": "/media/multikara-01.webp",
+      "alt": "Očištěný rám a kola Multikáry",
+      "description": "Tryskání rámu Multikáry včetně detailů podvozku. Výsledkem je připravený povrch pro navazující úpravy.",
+      "images": [
+        "/media/multikara-01.webp",
+        "/media/multikara-03.webp",
+        "/media/multikara-02.webp",
+        "/media/multikara-04.webp"
+      ],
+      "video": ""
+    },
+    {
+      "id": "veteran",
+      "title": "Další veterán",
+      "category": "Veteráni",
+      "kicker": "Práce na podvozku",
+      "cover": "/media/veteran-01.webp",
+      "alt": "Tryskání spodní části karoserie veterána",
+      "description": "Očištění spodní části karoserie a konstrukčních dílů při renovaci staršího vozidla.",
+      "images": [
+        "/media/veteran-01.webp",
+        "/media/veteran-02.webp",
+        "/media/veteran-03.webp"
+      ],
+      "video": "/media/veteran-video.mp4"
+    },
+    {
+      "id": "karvina",
+      "title": "Práce v Karviné",
+      "category": "Konstrukce",
+      "kicker": "Tryskání na místě",
+      "cover": "/media/karvina-04.webp",
+      "alt": "Tryskání dlouhé kovové konstrukce v Karviné-Petrovicích",
+      "description": "Ukázka tryskání rozměrnější kovové konstrukce v Karviné-Petrovicích.",
+      "images": [
+        "/media/karvina-04.webp",
+        "/media/karvina-02.webp",
+        "/media/karvina-01.webp",
+        "/media/karvina-03.webp"
+      ],
+      "video": ""
+    }
+  ],
+  "faqs": [
+    [
+      "Co ovlivňuje cenu tryskání?",
+      "Především velikost dílu, druh materiálu, stav povrchu, množství starých vrstev a přístupnost. Pro smysluplnou nabídku nám pošlete popis a fotografie zakázky."
+    ],
+    [
+      "Jak připravit karoserii nebo díly?",
+      "Rozsah demontáže a ochranu citlivých částí je nejlepší domluvit předem. Popište, co už je odstrojené a které části mají zůstat zachované."
+    ],
+    [
+      "Lze tryskat i u zákazníka?",
+      "V galerii najdete i zakázky realizované na místě. Možnost výjezdu posoudíme podle místa, prostoru a konkrétního rozsahu práce."
+    ],
+    [
+      "Co následuje po očištění?",
+      "Očištěný kov je připravený pro navazující opravy a povrchovou úpravu. Další postup a ochranu materiálu doporučujeme řešit už při domlouvání zakázky."
+    ]
+  ],
+  "clips": [
+    {
+      "title": "Škoda 110 R v hlavní roli",
+      "text": "Krátký pohled na tryskání legendárního kupé.",
+      "tag": "Karoserie",
+      "time": "0:15",
+      "src": "/media/skoda-110r-video.mp4",
+      "poster": "/media/skoda-110r-05.webp"
+    },
+    {
+      "title": "Každý detail se počítá",
+      "text": "Minuta poctivé práce na karoserii Škody 110 R.",
+      "tag": "Detail práce",
+      "time": "1:00",
+      "src": "/media/skoda-110r-detail.mp4",
+      "poster": "/media/skoda-110r-04.webp"
+    },
+    {
+      "title": "Veterán. Znovu od základu.",
+      "text": "Odstranění starých vrstev ze spodní části vozu.",
+      "tag": "Renovace",
+      "time": "0:54",
+      "src": "/media/veteran-video.mp4",
+      "poster": "/media/veteran-01.webp"
+    },
+    {
+      "title": "Pod povrchem historie",
+      "text": "Delší záběr z přípravy veterána na další renovaci.",
+      "tag": "Z dílny",
+      "time": "1:30",
+      "src": "/media/veteran-detail.mp4",
+      "poster": "/media/veteran-03.webp"
+    }
+  ]
+}
