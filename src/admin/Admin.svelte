@@ -1,15 +1,16 @@
 <script>
   import { onMount } from 'svelte';
+  import { upload as blobUpload } from '@vercel/blob/client';
   import { defaults, sections, copySections, validateContent } from '../lib/content-schema.js';
   import ContentFields from './ContentFields.svelte';
   import '../admin/admin.css';
   let username='admin',password='',authenticated=false,loading=true,busy=false,error='',notice='';
   let content=structuredClone(defaults),baseline='',revision=0,active='copy',copyGroup='nahoru',updatedAt='';
   let loginNeeded=false;
-  let addedPhotos=[];
+  let addedPhotos=[],addedVideos=[];
   $: dirty=baseline && JSON.stringify(content)!==baseline;
   $: photoChoices=[...new Set([...collectMedia(defaults),...collectMedia(content),...addedPhotos])];
-  $: videoChoices=[...new Set([...collectMedia(defaults,true),...collectMedia(content,true)])];
+  $: videoChoices=[...new Set([...collectMedia(defaults,true),...collectMedia(content,true),...addedVideos])];
   function collectMedia(object,video=false){
     const result=[];function walk(value){if(typeof value==='string'&&(video?/\.(mp4|webm)$/:/\.(webp|png|jpe?g)$/i).test(value)&&(value.startsWith('/media/')||value.startsWith('https://')))result.push(value);else if(value&&typeof value==='object')Object.values(value).forEach(walk);}walk(object);return result;
   }
@@ -25,9 +26,16 @@
   async function signOut(){if(dirty&&!confirm('Máte neuložené změny. Opravdu se odhlásit?'))return;try{await api('logout');authenticated=false;password='';baseline='';content=structuredClone(defaults);error='';}catch(e){error=e.message;}}
   async function save(){
     const checked=validateContent(content);if(!checked.valid){error=checked.errors.slice(0,5).join(' ');return;}
-    busy=true;error='';notice='';try{const data=await api('save',{content,revision});revision=data.revision;updatedAt=data.updatedAt;baseline=JSON.stringify(content);notice='Uloženo. Změny jsou nyní na webu.';}catch(e){error=e.message;}finally{busy=false;}
+    busy=true;error='';notice='';try{const data=await api('save',{content,revision});revision=data.revision;updatedAt=data.updatedAt;baseline=JSON.stringify(content);notice='Uloženo. Změny se na webu projeví do minuty.';}catch(e){error=e.message;}finally{busy=false;}
   }
-  async function upload(data){const result=await api('upload',{data});addedPhotos=[...addedPhotos,result.url];return result.url;}
+  async function upload(file,extension,onProgress){
+    const folder=extension==='webp'?'photos':'videos';
+    try{
+      const result=await blobUpload(`${folder}/${crypto.randomUUID()}.${extension}`,file,{access:'public',handleUploadUrl:'/api/admin?action=upload',contentType:file.type||`video/${extension}`,multipart:file.size>20_000_000,onUploadProgress:e=>onProgress?.(e.percentage)});
+      if(folder==='photos')addedPhotos=[...addedPhotos,result.url];else addedVideos=[...addedVideos,result.url];
+      return result.url;
+    }catch{throw new Error('Soubor se nepodařilo nahrát. Zkontrolujte připojení, případně se odhlaste a znovu přihlaste.');}
+  }
   function discard(){if(!dirty||confirm('Zahodit neuložené úpravy a načíst poslední uloženou verzi?'))load();}
   function backup(){const url=URL.createObjectURL(new Blob([JSON.stringify(content,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download=`bruzovice-zaloha-${new Date().toISOString().slice(0,10)}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
   async function restore(event){try{const file=event.target.files?.[0];if(!file)return;if(file.size>400000)throw new Error('Záloha je příliš velká.');const next=JSON.parse(await file.text());const checked=validateContent(next);if(!checked.valid)throw new Error('Tato záloha má neplatný formát.');if(dirty&&!confirm('Nahradit rozpracované změny zálohou?'))return;content=next;notice='Záloha je načtena. Zkontrolujte ji a uložte změny.';error='';}catch(e){error=e.message;}finally{event.target.value='';}}

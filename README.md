@@ -18,6 +18,22 @@ Doména `piskovanibruzovice.cz` byla při úpravě ověřena v účtu Resend. Pr
 
 Formulář kontroluje vstupy, souhlas, původ požadavku, velikost zprávy a skryté pole proti botům. Opakování stejného požadavku používá Resend Idempotency-Key. Úspěch zobrazí až po přijetí zprávy službou Resend; doručení do schránky závisí na příjemcově poštovním serveru. Při chybě zachová údaje a nabídne přímý e-mail. Fotografie se přikládají v e-mailovém klientu.
 
+## Administrace webu
+
+Na adrese **/admin** si majitel upraví texty, služby, realizace, časté otázky, kontaktní e-mail i fotografie a videa. Přihlašovací jméno je `admin`. Heslo se v kódu neukládá: server zná jen jeho hash v proměnné `ADMIN_PASSWORD_HASH`.
+
+Obsah a nahrané soubory leží ve **Vercel Blob**. Při prvním nastavení je potřeba ve Vercelu otevřít **Storage → Create → Blob** a připojit úložiště k projektu. Tím vznikne proměnná `BLOB_READ_WRITE_TOKEN`. Poté spusťte **Redeploy**.
+
+| Proměnná | Účel |
+| --- | --- |
+| `BLOB_READ_WRITE_TOKEN` | Vytvoří ji Vercel při připojení Blob úložiště. |
+| `ADMIN_PASSWORD_HASH` | Hash hesla ve tvaru `salt:hash` (scrypt). |
+| `ADMIN_SESSION_SECRET` | Náhodný řetězec pro podpis přihlášení. |
+
+Nový hash hesla vytvoříte příkazem `node --input-type=module -e "import('./server/cms.js').then(m=>console.log(m.hashPassword('NOVÉ_HESLO')))"`. Změnou hesla se všichni odhlásí.
+
+Každé uložení vytvoří novou verzi `cms/content-XXXXXXXX.json` a posledních 30 verzí zůstává jako historie. Návštěvníkům se změny projeví do minuty. Fotografie se v prohlížeči zmenší a převedou na WebP. Videa (MP4/WebM do 300 MB) se nahrávají přímo do úložiště.
+
 ## Místní spuštění
 
 Node.js 22.9 nebo novější:

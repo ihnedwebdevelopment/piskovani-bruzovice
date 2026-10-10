@@ -7,7 +7,8 @@ export const isMediaField = key => ['hero','intro','statement','cover','poster',
 export function safeMedia(value, video = false) {
   if (typeof value !== 'string') return false;
   if (!value && video) return true;
-  if (/^https:\/\/[a-z0-9-]+\.supabase\.co\/storage\/v1\/object\/public\/bruzovice-media\/photos\/[a-f0-9]{32}\.(jpg|png|webp)$/.test(value)) return !video;
+  const uploaded = value.match(/^https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\/(photos|videos)\/[a-f0-9-]{36}\.(webp|mp4|webm)$/);
+  if (uploaded) return video ? uploaded[1] === 'videos' : uploaded[1] === 'photos';
   const extension = video ? '(?:mp4|webm)' : '(?:webp|png|jpe?g)';
   return new RegExp(`^/media/[a-zA-Z0-9_/-]+\\.${extension}$`, 'i').test(value) && !value.includes('..');
 }
