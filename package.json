@@ -16,6 +16,7 @@
   "dependencies": {
     "@vercel/blob": "^2.8.1",
     "bootstrap": "^5.3.8",
+    "heic-to": "^1.6.5",
     "svelte": "^5.0.0"
   },
   "devDependencies": {

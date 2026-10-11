@@ -28,10 +28,10 @@
     const checked=validateContent(content);if(!checked.valid){error=checked.errors.slice(0,5).join(' ');return;}
     busy=true;error='';notice='';try{const data=await api('save',{content,revision});revision=data.revision;updatedAt=data.updatedAt;baseline=JSON.stringify(content);notice='Uloženo. Změny se na webu projeví do minuty.';}catch(e){error=e.message;}finally{busy=false;}
   }
-  async function upload(file,extension,onProgress){
+  async function upload(file,extension,onProgress,contentType){
     const folder=extension==='webp'?'photos':'videos';
     try{
-      const result=await blobUpload(`${folder}/${crypto.randomUUID()}.${extension}`,file,{access:'public',handleUploadUrl:'/api/admin?action=upload',contentType:file.type||`video/${extension}`,multipart:file.size>20_000_000,onUploadProgress:e=>onProgress?.(e.percentage)});
+      const result=await blobUpload(`${folder}/${crypto.randomUUID()}.${extension}`,file,{access:'public',handleUploadUrl:'/api/admin?action=upload',contentType:contentType||file.type||`video/${extension}`,multipart:file.size>20_000_000,onUploadProgress:e=>onProgress?.(e.percentage)});
       if(folder==='photos')addedPhotos=[...addedPhotos,result.url];else addedVideos=[...addedVideos,result.url];
       return result.url;
     }catch{throw new Error('Soubor se nepodařilo nahrát. Zkontrolujte připojení, případně se odhlaste a znovu přihlaste.');}

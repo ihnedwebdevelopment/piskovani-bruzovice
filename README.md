@@ -32,7 +32,7 @@ Obsah a nahrané soubory leží ve **Vercel Blob**. Při prvním nastavení je p
 
 Nový hash hesla vytvoříte příkazem `node --input-type=module -e "import('./server/cms.js').then(m=>console.log(m.hashPassword('NOVÉ_HESLO')))"`. Změnou hesla se všichni odhlásí.
 
-Každé uložení vytvoří novou verzi `cms/content-XXXXXXXX.json` a posledních 30 verzí zůstává jako historie. Návštěvníkům se změny projeví do minuty. Fotografie se v prohlížeči zmenší a převedou na WebP. Videa (MP4/WebM do 300 MB) se nahrávají přímo do úložiště.
+Každé uložení vytvoří novou verzi `cms/content-XXXXXXXX.json` a posledních 30 verzí zůstává jako historie. Návštěvníkům se změny projeví do minuty. Fotografie se v prohlížeči zmenší a převedou na WebP. Videa (MP4, MOV, WebM do 300 MB) se nahrávají přímo do úložiště.
 
 ## Místní spuštění
 
