@@ -1,5 +1,6 @@
 <script>
   import MediaField from './MediaField.svelte';
+  import BulkPhotos from './BulkPhotos.svelte';
   import { labels, isMediaField } from '../lib/content-schema.js';
   export let value;
   export let path=[];
@@ -28,6 +29,7 @@
       {:else}<svelte:self value={item} path={[...path,index]} template={template?.[0]} {photos} {videos} {upload} onChange={next=>change(index,next)} />{/if}
     </section>
   {/each}
+  {#if path.at(-1)==='images'}<BulkPhotos {upload} room={80-value.length} onAdd={url=>{value=[...value,url];onChange(value);}} />{/if}
   <button class="admin-button secondary" type="button" on:click={add} disabled={value.length>=80}>+ {path.at(-1)==='images'?'Přidat fotografii':path[0]==='projects'?'Přidat realizaci':path[0]==='faqs'?'Přidat otázku':'Přidat položku'}</button>
 {:else if value && typeof value==='object'}
   <div class="admin-fields">

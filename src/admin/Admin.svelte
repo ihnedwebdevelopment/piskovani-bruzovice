@@ -34,7 +34,7 @@
       const result=await blobUpload(`${folder}/${crypto.randomUUID()}.${extension}`,file,{access:'public',handleUploadUrl:'/api/admin?action=upload',contentType:contentType||file.type||`video/${extension}`,multipart:file.size>20_000_000,onUploadProgress:e=>onProgress?.(e.percentage)});
       if(folder==='photos')addedPhotos=[...addedPhotos,result.url];else addedVideos=[...addedVideos,result.url];
       return result.url;
-    }catch{throw new Error('Soubor se nepodařilo nahrát. Zkontrolujte připojení, případně se odhlaste a znovu přihlaste.');}
+    }catch(e){throw new Error(`Soubor se nepodařilo nahrát. Zkontrolujte připojení, případně se odhlaste a znovu přihlaste. (${e?.message||'neznámá chyba'})`);}
   }
   function discard(){if(!dirty||confirm('Zahodit neuložené úpravy a načíst poslední uloženou verzi?'))load();}
   function backup(){const url=URL.createObjectURL(new Blob([JSON.stringify(content,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download=`bruzovice-zaloha-${new Date().toISOString().slice(0,10)}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
